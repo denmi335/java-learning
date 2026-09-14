@@ -7,7 +7,7 @@ public class Main {
             System.out.print(grade + " ");
         }
         System.out.println();
-        
+
         int sum = 0;
         for (int grade : grades) {
             sum += grade;
