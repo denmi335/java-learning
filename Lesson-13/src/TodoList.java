@@ -59,7 +59,7 @@ public class TodoList {
     }
 
     static void addTodo(Scanner scanner) {
-        // Добавить задачу
+
     }
 
     static void removeTodo(Scanner scanner) {
