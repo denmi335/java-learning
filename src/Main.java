@@ -6,7 +6,7 @@ public class Main {
         Pair<Integer, String> pair2 = Pair.of(1, "Первый");
         System.out.println(pair2);
 
-        pair1.setValue(30);//
+        pair1.setValue(30);
         System.out.println(pair1);
 
         String key = pair1.getKey();
