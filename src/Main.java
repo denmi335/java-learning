@@ -10,7 +10,7 @@ public class Main {
         System.out.println(pair1);
 
         String key = pair1.getKey();
-        Integer value = pair1.getValue();
+        Integer value = pair1.getValue();//
 
         System.out.println("Ключ: " + key);
         System.out.println("Значение: " + value);
