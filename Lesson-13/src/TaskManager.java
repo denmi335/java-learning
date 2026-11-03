@@ -54,7 +54,6 @@ public class TaskManager {
             List<String> lines = Files.readAllLines(path);
 
             for (String line : lines) {
-                // Разделяем строку по |
                 String[] parts = line.split("\\|");
 
                 int id = Integer.parseInt(parts[0]);
@@ -62,16 +61,13 @@ public class TaskManager {
                 boolean isDone = Boolean.parseBoolean(parts[2]);
                 int priority = Integer.parseInt(parts[3]);
 
-                // Создаём задачу
                 Task task = new Task(id, title, priority);
                 if (isDone) {
                     task.setCompleted(true);
                 }
 
-                // Добавляем в map
                 tasks.put(id, task);
 
-                // Обновляем nextId
                 if (id >= nextId) {
                     nextId = id + 1;
                 }
@@ -87,7 +83,6 @@ public class TaskManager {
         List<String> lines = new ArrayList<>();
 
         for (Task task : tasks.values()) {
-            // Создаём строку: id|title|isDone|priority
             String line = task.getId() + "|" +
                     task.getTitle() + "|" +
                     task.isDone() + "|" +
@@ -95,7 +90,6 @@ public class TaskManager {
             lines.add(line);
         }
 
-        // Записываем в файл
         Path path = Paths.get("todos.txt");
         try {
             Files.write(path, lines);
